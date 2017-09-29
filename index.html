@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guess the number !</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<script type="text/javascript"  src="css/bootstrap.min.css" rel="stylesheet"></script>
+</head>
+<body ><button>button</button>
+<!--<script type="text/javascript" src="js/angular.js" ></script>-->
+<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+<script type="text/javascript">
+$("button").click(function(){
+	alert(Activation.arguments);
+})
+</script>
+<div ng-app="phonecatApp" ng-controller="PhoneListController">
+<p> Nothing here {{"yet"+"!"}}</p>
+<ul>
+<li ng-repeat="phone in phones">
+<span>{{phone.name}}</span>
+<p> {{phone.snippet}} </p>
+</li>
+<li>
+<span> Motor XXoom with Wi-Fi</span>
+<p> The Next, Next Generation Tablet. </p>
+</li>
+</ul>
+</div>
+<script type="text/javascript">
+var phonecatApp=angular.module('phonecatApp',[]);
+phonecatApp.controller('PhoneListController',function PhoneListController($scope){
+$scope.phones=[{
+	name:'Nexus S',
+	snippet:'Fast jst got faster with Nexus',
+	},
+	{
+	name:'motorola Xoom',
+		snippet:'the next,  next generation Tablet'
+	}
+	];
+
+})
+function GuessTheNumberController($scope)
+{
+	$scope.verifyGuess=function()
+	{
+		$scope.deviation=$scope.original-$scope.guess;
+		$scope.noOfTries=$scope.noOfTries+1;
+		
+	}
+	//$scope.initializeGame=function
+}
+var btn=document.createElement("BUTTON");
+</script>
+
+<!--<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>-->
+<hr color="#000000" >
+
+
+</body>
+</html>
